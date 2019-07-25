@@ -1,1 +1,41 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>xue-ui,一款轻量级的React UI库</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <span class="logoLink">xue-ui</span>
+    <a href="https://william-xue.github.io/">组件</a>
+  </header>
+  <main>
+    <section id="moveWrap">
+      <div class="logo">xue-ui</div>
+    </section>
+    <section class="describeWrap">
+      <h1>一款轻量级的React UI库</h1>
+      <div class="jumpBtn">
+        <a href="https://william-xue.github.io/" class="startBtn">开始使用</a>
+        <a
+          href="https://william-xue.github.io/"
+          class="gitBtn"
+          target="_blank"
+        >GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="text/javascript">
+    document.onmousemove = function (e) {
+      e = e || window.event;
+      var x = 0.5 - e.clientX / document.body.offsetWidth;
+      var y = 0.5 - e.clientY / document.body.offsetHeight;
+      document.getElementById("moveWrap").style.transform = "translate(" + x * 100 + "px," + y * 100 + "px)";
+    };
+  </script>
+</body>
+</html>
